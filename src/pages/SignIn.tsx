@@ -6,6 +6,7 @@ import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { Checkbox } from "@/components/ui/checkbox";
+import { ArrowLeft, Zap } from "lucide-react";
 
 const SignIn = () => {
   const [email, setEmail] = useState("");
@@ -26,12 +27,20 @@ const SignIn = () => {
   return (
     <div className="min-h-screen bg-background flex items-center justify-center p-4">
       <div className="w-full max-w-md space-y-6">
+        {/* Back Button */}
+        <Button variant="ghost" size="sm" className="mb-4" asChild>
+          <Link to="/">
+            <ArrowLeft className="w-4 h-4 mr-2" />
+            Back to Home
+          </Link>
+        </Button>
+
         {/* Header */}
         <div className="text-center space-y-2">
-          <div className="flex items-center justify-center space-x-2 mb-4">
-            <div className="text-3xl text-electric">⚡</div>
+          <Link to="/" className="inline-flex items-center justify-center space-x-2 mb-4 hover:opacity-80 transition-opacity">
+            <Zap className="w-8 h-8 text-electric" />
             <h1 className="text-2xl font-bold text-foreground">ElectricFlow</h1>
-          </div>
+          </Link>
           <h2 className="text-xl font-semibold text-foreground">Welcome back</h2>
           <p className="text-muted-foreground">Sign in to access your fleet dashboard</p>
         </div>

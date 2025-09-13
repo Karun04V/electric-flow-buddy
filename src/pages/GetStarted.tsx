@@ -7,7 +7,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
-import { CheckCircle, ArrowLeft, Users, Calendar, Shield } from "lucide-react";
+import { CheckCircle, ArrowLeft, Users, Calendar, Shield, Zap } from "lucide-react";
 
 const GetStarted = () => {
   const [formData, setFormData] = useState({
@@ -133,6 +133,12 @@ const GetStarted = () => {
           </div>
           
           <div className="max-w-3xl">
+            <Link to="/" className="inline-flex items-center gap-2 mb-4 hover:opacity-80 transition-opacity">
+              <Zap className="w-8 h-8 text-electric" />
+              <span className="text-2xl font-bold bg-gradient-to-r from-electric to-energy bg-clip-text text-transparent">
+                ElectricFlow
+              </span>
+            </Link>
             <h1 className="text-3xl font-bold text-foreground mb-4">
               Transform Your City's Transit System
             </h1>
