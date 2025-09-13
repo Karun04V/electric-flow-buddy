@@ -41,8 +41,8 @@ const Navigation = () => {
             <Button variant="ghost" className="hover:text-electric" asChild>
               <Link to="/signin">Sign In</Link>
             </Button>
-            <Button variant="electric" size="sm">
-              Get Started
+            <Button variant="electric" size="sm" asChild>
+              <Link to="/get-started">Get Started</Link>
             </Button>
           </div>
 
@@ -77,8 +77,8 @@ const Navigation = () => {
                 <Button variant="ghost" className="justify-start hover:text-electric" asChild>
                   <Link to="/signin">Sign In</Link>
                 </Button>
-                <Button variant="electric" size="sm">
-                  Get Started
+                <Button variant="electric" size="sm" asChild>
+                  <Link to="/get-started">Get Started</Link>
                 </Button>
               </div>
             </div>
